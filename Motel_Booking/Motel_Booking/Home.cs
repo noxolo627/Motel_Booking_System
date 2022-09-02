@@ -44,5 +44,12 @@ namespace Motel_Booking
             x.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Payments x = new Payments();
+            x.Show();
+            this.Hide();
+        }
     }
 }

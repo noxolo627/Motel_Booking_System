@@ -31,17 +31,6 @@ namespace Motel_Booking
         {
             this.components = new System.ComponentModel.Container();
             this.bookingDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupDataset = new Motel_Booking.groupDataset();
             this.txtBID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCID = new System.Windows.Forms.TextBox();
@@ -77,15 +66,27 @@ namespace Motel_Booking
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.bookingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupDataset = new Motel_Booking.groupDataset();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookingTableAdapter = new Motel_Booking.groupDatasetTableAdapters.BookingTableAdapter();
             this.tableAdapterManager = new Motel_Booking.groupDatasetTableAdapters.TableAdapterManager();
             this.customerTableAdapter1 = new Motel_Booking.groupDatasetTableAdapters.CustomerTableAdapter();
             this.staffTableAdapter1 = new Motel_Booking.groupDatasetTableAdapters.StaffTableAdapter();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bookingDataGridView)).BeginInit();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupDataset)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bookingDataGridView
@@ -114,79 +115,6 @@ namespace Motel_Booking
             this.bookingDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.bookingDataGridView.Size = new System.Drawing.Size(938, 462);
             this.bookingDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "booking_id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "booking_id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "cust_id";
-            this.dataGridViewTextBoxColumn2.HeaderText = "cust_id";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "staff_id";
-            this.dataGridViewTextBoxColumn3.HeaderText = "staff_id";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "room_num";
-            this.dataGridViewTextBoxColumn4.HeaderText = "room_num";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "booking_type";
-            this.dataGridViewTextBoxColumn5.HeaderText = "booking_type";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "total_cost";
-            this.dataGridViewTextBoxColumn6.HeaderText = "total_cost";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "payment_date";
-            this.dataGridViewTextBoxColumn7.HeaderText = "payment_date";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "check_in";
-            this.dataGridViewTextBoxColumn8.HeaderText = "check_in";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "check_out";
-            this.dataGridViewTextBoxColumn9.HeaderText = "check_out";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // bookingBindingSource
-            // 
-            this.bookingBindingSource.DataMember = "Booking";
-            this.bookingBindingSource.DataSource = this.groupDataset;
-            // 
-            // groupDataset
-            // 
-            this.groupDataset.DataSetName = "groupDataset";
-            this.groupDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtBID
             // 
@@ -418,6 +346,7 @@ namespace Motel_Booking
             this.button2.TabIndex = 5;
             this.button2.Text = "REFRESH";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnSearch
             // 
@@ -427,6 +356,7 @@ namespace Motel_Booking
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // groupBox1
             // 
@@ -528,6 +458,90 @@ namespace Motel_Booking
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button6
+            // 
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(1126, 2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(81, 36);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "BACK";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // bookingBindingSource
+            // 
+            this.bookingBindingSource.DataMember = "Booking";
+            this.bookingBindingSource.DataSource = this.groupDataset;
+            // 
+            // groupDataset
+            // 
+            this.groupDataset.DataSetName = "groupDataset";
+            this.groupDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "booking_id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "booking_id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "cust_id";
+            this.dataGridViewTextBoxColumn2.HeaderText = "cust_id";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "staff_id";
+            this.dataGridViewTextBoxColumn3.HeaderText = "staff_id";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "room_num";
+            this.dataGridViewTextBoxColumn4.HeaderText = "room_num";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "booking_type";
+            this.dataGridViewTextBoxColumn5.HeaderText = "booking_type";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "total_cost";
+            this.dataGridViewTextBoxColumn6.HeaderText = "total_cost";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "payment_date";
+            this.dataGridViewTextBoxColumn7.HeaderText = "payment_date";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "check_in";
+            this.dataGridViewTextBoxColumn8.HeaderText = "check_in";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "check_out";
+            this.dataGridViewTextBoxColumn9.HeaderText = "check_out";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
             // bookingTableAdapter
             // 
             this.bookingTableAdapter.ClearBeforeFill = true;
@@ -551,16 +565,15 @@ namespace Motel_Booking
             // 
             this.staffTableAdapter1.ClearBeforeFill = true;
             // 
-            // button6
+            // button4
             // 
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(1126, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(81, 36);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "BACK";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button4.Location = new System.Drawing.Point(958, 652);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(247, 57);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "CANCEL BOOKING";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // View_Bookings
             // 
@@ -580,6 +593,7 @@ namespace Motel_Booking
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
@@ -609,10 +623,10 @@ namespace Motel_Booking
             this.Text = "View_Bookings";
             this.Load += new System.EventHandler(this.View_Bookings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bookingDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupDataset)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupDataset)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -672,5 +686,6 @@ namespace Motel_Booking
         private groupDatasetTableAdapters.CustomerTableAdapter customerTableAdapter1;
         private groupDatasetTableAdapters.StaffTableAdapter staffTableAdapter1;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button4;
     }
 }

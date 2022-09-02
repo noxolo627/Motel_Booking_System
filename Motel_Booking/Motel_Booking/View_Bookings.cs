@@ -41,6 +41,10 @@ namespace Motel_Booking
                 MessageBox.Show("Select a booking to continue");
                 return;
             }
+            else
+            {
+                UpdateBooking x = new UpdateBooking();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -69,6 +73,57 @@ namespace Motel_Booking
             Booking x = new Booking();
             x.Show();
             this.Hide();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            DateTime start = startDate.Value;
+            DateTime end = endDate.Value;
+            if(end.Ticks < start.Ticks)
+            {
+                MessageBox.Show("The end date cannot be before the start date");
+                return;
+            }
+            else
+            {
+                try
+                {
+                    bookingTableAdapter.FillByBooking(groupDataset.Booking, start.ToShortDateString(), end.ToShortDateString());
+                }catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bookingTableAdapter.Fill(groupDataset.Booking);
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if(txtBID.Text.Equals(""))
+            {
+                MessageBox.Show("Select a booking to continue");
+                return;
+            }
+            try
+            {
+                bookingTableAdapter.DeleteQuery(int.Parse(txtBID.Text));
+                //cancel the booking from payments
+                MessageBox.Show("Booking Successfully Canceled");
+                button2_Click(sender, e);
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

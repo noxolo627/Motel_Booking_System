@@ -22,3 +22,29 @@ D:\M2 Projects\Updated Motel Booking System\Motel_Booking\Motel_Booking\obj\Debu
 D:\M2 Projects\Updated Motel Booking System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.Update_Staff.resources
 D:\M2 Projects\Updated Motel Booking System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.View_Bookings.resources
 D:\M2 Projects\Updated Motel Booking System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.Booking.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\bin\Debug\Motel_Booking.exe.config
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\bin\Debug\Motel_Booking.exe
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\bin\Debug\Motel_Booking.pdb
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.csproj.AssemblyReference.cache
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.Add_Customer.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.Add_Room.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.Add_Room_Image.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.Add_Staff.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.Booking.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.Customer.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.Customer_Bookings.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.Home.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.Properties.Resources.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.Staff.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.Update_Customer.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.Update_Room.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.Update_Staff.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.View_Bookings.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.View_Rooms.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.View_Room_Images.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.csproj.GenerateResource.cache
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.csproj.CoreCompileInputs.cache
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.exe
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.pdb
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.Payments.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.UpdateBooking.resources
