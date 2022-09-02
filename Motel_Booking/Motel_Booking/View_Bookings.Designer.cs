@@ -67,6 +67,7 @@ namespace Motel_Booking
             this.label15 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.bookingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupDataset = new Motel_Booking.groupDataset();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,7 +83,7 @@ namespace Motel_Booking
             this.tableAdapterManager = new Motel_Booking.groupDatasetTableAdapters.TableAdapterManager();
             this.customerTableAdapter1 = new Motel_Booking.groupDatasetTableAdapters.CustomerTableAdapter();
             this.staffTableAdapter1 = new Motel_Booking.groupDatasetTableAdapters.StaffTableAdapter();
-            this.button4 = new System.Windows.Forms.Button();
+            this.paymentTableAdapter1 = new Motel_Booking.groupDatasetTableAdapters.PaymentTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bookingDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).BeginInit();
@@ -469,6 +470,16 @@ namespace Motel_Booking
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(958, 652);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(247, 57);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "CANCEL BOOKING";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // bookingBindingSource
             // 
             this.bookingBindingSource.DataMember = "Booking";
@@ -565,15 +576,9 @@ namespace Motel_Booking
             // 
             this.staffTableAdapter1.ClearBeforeFill = true;
             // 
-            // button4
+            // paymentTableAdapter1
             // 
-            this.button4.Location = new System.Drawing.Point(958, 652);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(247, 57);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "CANCEL BOOKING";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.paymentTableAdapter1.ClearBeforeFill = true;
             // 
             // View_Bookings
             // 
@@ -687,5 +692,6 @@ namespace Motel_Booking
         private groupDatasetTableAdapters.StaffTableAdapter staffTableAdapter1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button4;
+        private groupDatasetTableAdapters.PaymentTableAdapter paymentTableAdapter1;
     }
 }

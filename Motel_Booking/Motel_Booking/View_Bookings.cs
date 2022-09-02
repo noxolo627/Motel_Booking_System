@@ -44,6 +44,8 @@ namespace Motel_Booking
             else
             {
                 UpdateBooking x = new UpdateBooking();
+                x.setUpdate(txtBID.Text, txtRoomNum.Text, txtTotalCost.Text, txtCheckIn.Text, txtCheckOut.Text);
+                x.Show();
             }
         }
 
@@ -117,7 +119,7 @@ namespace Motel_Booking
             try
             {
                 bookingTableAdapter.DeleteQuery(int.Parse(txtBID.Text));
-                //cancel the booking from payments
+                paymentTableAdapter1.DeleteQuery(int.Parse(txtBID.Text));
                 MessageBox.Show("Booking Successfully Canceled");
                 button2_Click(sender, e);
             }catch(Exception ex)
