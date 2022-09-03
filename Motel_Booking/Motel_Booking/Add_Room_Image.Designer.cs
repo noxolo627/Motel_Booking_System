@@ -146,8 +146,12 @@ namespace Motel_Booking
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BookingTableAdapter = null;
+            this.tableAdapterManager.CustomerTableAdapter = null;
+            this.tableAdapterManager.PaymentTableAdapter = null;
             this.tableAdapterManager.Room_ImageTableAdapter = this.room_ImageTableAdapter;
             this.tableAdapterManager.RoomTableAdapter = null;
+            this.tableAdapterManager.StaffTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Motel_Booking.groupDatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // Add_Room_Image

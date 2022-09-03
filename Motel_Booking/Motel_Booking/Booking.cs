@@ -368,5 +368,11 @@ namespace Motel_Booking
                 return true;
             return false;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Add_Customer x = new Add_Customer();
+            x.Show();
+        }
     }
 }

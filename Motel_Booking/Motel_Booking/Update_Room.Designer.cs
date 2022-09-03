@@ -61,7 +61,7 @@ namespace Motel_Booking
             "Family",
             "Suite",
             "Presidential Suite"});
-            this.txtRoomType.Location = new System.Drawing.Point(235, 161);
+            this.txtRoomType.Location = new System.Drawing.Point(235, 116);
             this.txtRoomType.Name = "txtRoomType";
             this.txtRoomType.Size = new System.Drawing.Size(176, 30);
             this.txtRoomType.TabIndex = 32;
@@ -81,9 +81,9 @@ namespace Motel_Booking
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(79, 519);
+            this.btnRegister.Location = new System.Drawing.Point(79, 440);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(280, 53);
+            this.btnRegister.Size = new System.Drawing.Size(272, 53);
             this.btnRegister.TabIndex = 30;
             this.btnRegister.Text = "UPDATE DETAILS";
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -92,7 +92,7 @@ namespace Motel_Booking
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 338);
+            this.label4.Location = new System.Drawing.Point(16, 259);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 22);
             this.label4.TabIndex = 25;
@@ -101,7 +101,7 @@ namespace Motel_Booking
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(231, 228);
+            this.label5.Location = new System.Drawing.Point(231, 162);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 22);
             this.label5.TabIndex = 26;
@@ -110,7 +110,7 @@ namespace Motel_Booking
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 228);
+            this.label3.Location = new System.Drawing.Point(16, 162);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(126, 22);
             this.label3.TabIndex = 27;
@@ -119,7 +119,7 @@ namespace Motel_Booking
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(231, 126);
+            this.label2.Location = new System.Drawing.Point(231, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 22);
             this.label2.TabIndex = 28;
@@ -129,7 +129,7 @@ namespace Motel_Booking
             // 
             this.txtPrice.BackColor = System.Drawing.Color.White;
             this.txtPrice.ForeColor = System.Drawing.Color.Black;
-            this.txtPrice.Location = new System.Drawing.Point(235, 263);
+            this.txtPrice.Location = new System.Drawing.Point(235, 197);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(176, 29);
             this.txtPrice.TabIndex = 21;
@@ -138,17 +138,17 @@ namespace Motel_Booking
             // 
             this.txtDescription.BackColor = System.Drawing.Color.White;
             this.txtDescription.ForeColor = System.Drawing.Color.Black;
-            this.txtDescription.Location = new System.Drawing.Point(20, 373);
+            this.txtDescription.Location = new System.Drawing.Point(20, 294);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(399, 119);
+            this.txtDescription.Size = new System.Drawing.Size(391, 119);
             this.txtDescription.TabIndex = 22;
             // 
             // txtNumberOfBeds
             // 
             this.txtNumberOfBeds.BackColor = System.Drawing.Color.White;
             this.txtNumberOfBeds.ForeColor = System.Drawing.Color.Black;
-            this.txtNumberOfBeds.Location = new System.Drawing.Point(20, 263);
+            this.txtNumberOfBeds.Location = new System.Drawing.Point(20, 197);
             this.txtNumberOfBeds.Name = "txtNumberOfBeds";
             this.txtNumberOfBeds.Size = new System.Drawing.Size(176, 29);
             this.txtNumberOfBeds.TabIndex = 23;
@@ -156,7 +156,7 @@ namespace Motel_Booking
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 126);
+            this.label1.Location = new System.Drawing.Point(16, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 22);
             this.label1.TabIndex = 29;
@@ -166,7 +166,7 @@ namespace Motel_Booking
             // 
             this.txtRoomNumber.BackColor = System.Drawing.Color.White;
             this.txtRoomNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtRoomNumber.Location = new System.Drawing.Point(20, 161);
+            this.txtRoomNumber.Location = new System.Drawing.Point(20, 116);
             this.txtRoomNumber.Name = "txtRoomNumber";
             this.txtRoomNumber.ReadOnly = true;
             this.txtRoomNumber.Size = new System.Drawing.Size(176, 29);
@@ -174,9 +174,9 @@ namespace Motel_Booking
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(79, 578);
+            this.button2.Location = new System.Drawing.Point(79, 499);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(280, 53);
+            this.button2.Size = new System.Drawing.Size(272, 53);
             this.button2.TabIndex = 30;
             this.button2.Text = "CANCEL";
             this.button2.UseVisualStyleBackColor = true;
@@ -212,7 +212,7 @@ namespace Motel_Booking
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(439, 669);
+            this.ClientSize = new System.Drawing.Size(439, 572);
             this.Controls.Add(this.txtRoomType);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);

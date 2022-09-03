@@ -55,7 +55,7 @@ namespace Motel_Booking
             // 
             // txtFName
             // 
-            this.txtFName.Location = new System.Drawing.Point(60, 122);
+            this.txtFName.Location = new System.Drawing.Point(30, 78);
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(206, 29);
             this.txtFName.TabIndex = 0;
@@ -63,7 +63,7 @@ namespace Motel_Booking
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 97);
+            this.label1.Location = new System.Drawing.Point(26, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 22);
             this.label1.TabIndex = 1;
@@ -72,7 +72,7 @@ namespace Motel_Booking
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(546, 12);
+            this.button1.Location = new System.Drawing.Point(406, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 34);
             this.button1.TabIndex = 2;
@@ -83,7 +83,7 @@ namespace Motel_Booking
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(128, 429);
+            this.button2.Location = new System.Drawing.Point(73, 380);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(335, 49);
             this.button2.TabIndex = 2;
@@ -94,7 +94,7 @@ namespace Motel_Booking
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(128, 361);
+            this.button3.Location = new System.Drawing.Point(73, 312);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(335, 49);
             this.button3.TabIndex = 2;
@@ -104,7 +104,7 @@ namespace Motel_Booking
             // 
             // txtLName
             // 
-            this.txtLName.Location = new System.Drawing.Point(364, 122);
+            this.txtLName.Location = new System.Drawing.Point(274, 78);
             this.txtLName.Name = "txtLName";
             this.txtLName.Size = new System.Drawing.Size(206, 29);
             this.txtLName.TabIndex = 0;
@@ -112,7 +112,7 @@ namespace Motel_Booking
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(360, 97);
+            this.label2.Location = new System.Drawing.Point(270, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 22);
             this.label2.TabIndex = 1;
@@ -121,7 +121,7 @@ namespace Motel_Booking
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(56, 164);
+            this.label3.Location = new System.Drawing.Point(26, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 22);
             this.label3.TabIndex = 1;
@@ -129,7 +129,7 @@ namespace Motel_Booking
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(364, 189);
+            this.txtPhone.Location = new System.Drawing.Point(274, 145);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(206, 29);
             this.txtPhone.TabIndex = 0;
@@ -137,7 +137,7 @@ namespace Motel_Booking
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(360, 164);
+            this.label4.Location = new System.Drawing.Point(270, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 22);
             this.label4.TabIndex = 1;
@@ -145,7 +145,7 @@ namespace Motel_Booking
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(60, 261);
+            this.txtEmail.Location = new System.Drawing.Point(30, 217);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(206, 29);
             this.txtEmail.TabIndex = 0;
@@ -153,7 +153,7 @@ namespace Motel_Booking
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(56, 236);
+            this.label5.Location = new System.Drawing.Point(26, 192);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 22);
             this.label5.TabIndex = 1;
@@ -161,7 +161,7 @@ namespace Motel_Booking
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(364, 261);
+            this.txtAddress.Location = new System.Drawing.Point(274, 217);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(206, 71);
@@ -170,7 +170,7 @@ namespace Motel_Booking
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(360, 236);
+            this.label6.Location = new System.Drawing.Point(270, 192);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 22);
             this.label6.TabIndex = 1;
@@ -182,7 +182,7 @@ namespace Motel_Booking
             this.txtGender.Items.AddRange(new object[] {
             "MALE",
             "FEMALE"});
-            this.txtGender.Location = new System.Drawing.Point(60, 189);
+            this.txtGender.Location = new System.Drawing.Point(30, 145);
             this.txtGender.Name = "txtGender";
             this.txtGender.Size = new System.Drawing.Size(206, 30);
             this.txtGender.TabIndex = 3;
@@ -217,7 +217,7 @@ namespace Motel_Booking
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(653, 565);
+            this.ClientSize = new System.Drawing.Size(511, 456);
             this.Controls.Add(this.txtGender);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

@@ -46,8 +46,8 @@ namespace Motel_Booking
             this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roomTableAdapter = new Motel_Booking.groupDatasetTableAdapters.RoomTableAdapter();
             this.tableAdapterManager = new Motel_Booking.groupDatasetTableAdapters.TableAdapterManager();
-            this.room_ImageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.room_ImageTableAdapter = new Motel_Booking.groupDatasetTableAdapters.Room_ImageTableAdapter();
+            this.room_ImageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.groupDataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
@@ -58,18 +58,20 @@ namespace Motel_Booking
             // 
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(355, 16);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 41);
             this.button1.TabIndex = 19;
-            this.button1.Text = "<<<<<";
+            this.button1.Text = "BACK";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(90, 523);
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.Location = new System.Drawing.Point(84, 407);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(280, 53);
             this.btnRegister.TabIndex = 18;
@@ -80,87 +82,97 @@ namespace Motel_Booking
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 342);
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(21, 220);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 25);
+            this.label4.Size = new System.Drawing.Size(131, 22);
             this.label4.TabIndex = 13;
             this.label4.Text = "Room Description";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(242, 232);
+            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(236, 149);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 25);
+            this.label5.Size = new System.Drawing.Size(44, 22);
             this.label5.TabIndex = 14;
             this.label5.Text = "Price";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 232);
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(21, 149);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 25);
+            this.label3.Size = new System.Drawing.Size(126, 22);
             this.label3.TabIndex = 15;
             this.label3.Text = "Number Of Beds";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(242, 130);
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(236, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 25);
+            this.label2.Size = new System.Drawing.Size(88, 22);
             this.label2.TabIndex = 16;
             this.label2.Text = "Room Type";
             // 
             // txtPrice
             // 
             this.txtPrice.BackColor = System.Drawing.Color.White;
+            this.txtPrice.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.ForeColor = System.Drawing.Color.Black;
-            this.txtPrice.Location = new System.Drawing.Point(246, 267);
+            this.txtPrice.Location = new System.Drawing.Point(240, 174);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(176, 33);
+            this.txtPrice.Size = new System.Drawing.Size(176, 29);
             this.txtPrice.TabIndex = 8;
             // 
             // txtDescription
             // 
             this.txtDescription.BackColor = System.Drawing.Color.White;
+            this.txtDescription.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.Color.Black;
-            this.txtDescription.Location = new System.Drawing.Point(31, 377);
+            this.txtDescription.Location = new System.Drawing.Point(25, 255);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(399, 119);
+            this.txtDescription.Size = new System.Drawing.Size(391, 119);
             this.txtDescription.TabIndex = 9;
             // 
             // txtNumberOfBeds
             // 
             this.txtNumberOfBeds.BackColor = System.Drawing.Color.White;
+            this.txtNumberOfBeds.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumberOfBeds.ForeColor = System.Drawing.Color.Black;
-            this.txtNumberOfBeds.Location = new System.Drawing.Point(31, 267);
+            this.txtNumberOfBeds.Location = new System.Drawing.Point(25, 174);
             this.txtNumberOfBeds.Name = "txtNumberOfBeds";
-            this.txtNumberOfBeds.Size = new System.Drawing.Size(176, 33);
+            this.txtNumberOfBeds.Size = new System.Drawing.Size(176, 29);
             this.txtNumberOfBeds.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 130);
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 25);
+            this.label1.Size = new System.Drawing.Size(112, 22);
             this.label1.TabIndex = 17;
             this.label1.Text = "Room Number";
             // 
             // txtRoomNumber
             // 
             this.txtRoomNumber.BackColor = System.Drawing.Color.White;
+            this.txtRoomNumber.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRoomNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtRoomNumber.Location = new System.Drawing.Point(31, 165);
+            this.txtRoomNumber.Location = new System.Drawing.Point(25, 98);
             this.txtRoomNumber.Name = "txtRoomNumber";
-            this.txtRoomNumber.Size = new System.Drawing.Size(176, 33);
+            this.txtRoomNumber.Size = new System.Drawing.Size(176, 29);
             this.txtRoomNumber.TabIndex = 12;
             // 
             // txtRoomType
             // 
+            this.txtRoomType.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRoomType.FormattingEnabled = true;
             this.txtRoomType.Items.AddRange(new object[] {
             "Single",
@@ -169,9 +181,9 @@ namespace Motel_Booking
             "Family",
             "Suite",
             "Presidential Suite"});
-            this.txtRoomType.Location = new System.Drawing.Point(246, 165);
+            this.txtRoomType.Location = new System.Drawing.Point(240, 98);
             this.txtRoomType.Name = "txtRoomType";
-            this.txtRoomType.Size = new System.Drawing.Size(176, 33);
+            this.txtRoomType.Size = new System.Drawing.Size(176, 30);
             this.txtRoomType.TabIndex = 20;
             // 
             // groupDataset
@@ -191,22 +203,28 @@ namespace Motel_Booking
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BookingTableAdapter = null;
+            this.tableAdapterManager.CustomerTableAdapter = null;
+            this.tableAdapterManager.PaymentTableAdapter = null;
             this.tableAdapterManager.Room_ImageTableAdapter = this.room_ImageTableAdapter;
             this.tableAdapterManager.RoomTableAdapter = this.roomTableAdapter;
+            this.tableAdapterManager.StaffTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Motel_Booking.groupDatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // room_ImageTableAdapter
+            // 
+            this.room_ImageTableAdapter.ClearBeforeFill = true;
             // 
             // room_ImageBindingSource
             // 
             this.room_ImageBindingSource.DataMember = "Room_Image";
             this.room_ImageBindingSource.DataSource = this.groupDataset;
             // 
-            // room_ImageTableAdapter
-            // 
-            this.room_ImageTableAdapter.ClearBeforeFill = true;
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(90, 579);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(84, 463);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(280, 53);
             this.button2.TabIndex = 18;
@@ -219,7 +237,7 @@ namespace Motel_Booking
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(451, 644);
+            this.ClientSize = new System.Drawing.Size(451, 574);
             this.Controls.Add(this.txtRoomType);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
@@ -236,7 +254,7 @@ namespace Motel_Booking
             this.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Add_Room";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADD NEW ROOM";

@@ -59,15 +59,16 @@ namespace Motel_Booking
             this.txtGender.Items.AddRange(new object[] {
             "MALE",
             "FEMALE"});
-            this.txtGender.Location = new System.Drawing.Point(30, 195);
+            this.txtGender.Location = new System.Drawing.Point(64, 168);
             this.txtGender.Name = "txtGender";
             this.txtGender.Size = new System.Drawing.Size(206, 30);
             this.txtGender.TabIndex = 18;
+            this.txtGender.SelectedIndexChanged += new System.EventHandler(this.txtGender_SelectedIndexChanged);
             // 
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(98, 367);
+            this.button3.Location = new System.Drawing.Point(114, 343);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(335, 49);
             this.button3.TabIndex = 15;
@@ -78,12 +79,13 @@ namespace Motel_Booking
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(98, 435);
+            this.button2.Location = new System.Drawing.Point(114, 411);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(335, 49);
             this.button2.TabIndex = 16;
             this.button2.Text = "CANCEL";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -94,96 +96,108 @@ namespace Motel_Booking
             this.button1.TabIndex = 17;
             this.button1.Text = "BACK";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(330, 242);
+            this.label6.Location = new System.Drawing.Point(364, 215);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 22);
             this.label6.TabIndex = 9;
             this.label6.Text = "Address";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(330, 170);
+            this.label4.Location = new System.Drawing.Point(364, 143);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 22);
             this.label4.TabIndex = 10;
             this.label4.Text = "Phone";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(334, 267);
+            this.txtAddress.Location = new System.Drawing.Point(368, 240);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(206, 71);
             this.txtAddress.TabIndex = 4;
+            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(330, 103);
+            this.label2.Location = new System.Drawing.Point(364, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 22);
             this.label2.TabIndex = 11;
             this.label2.Text = "Last Name";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 242);
+            this.label5.Location = new System.Drawing.Point(60, 215);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 22);
             this.label5.TabIndex = 12;
             this.label5.Text = "Email";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(334, 195);
+            this.txtPhone.Location = new System.Drawing.Point(368, 168);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(206, 29);
             this.txtPhone.TabIndex = 5;
+            this.txtPhone.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 170);
+            this.label3.Location = new System.Drawing.Point(60, 143);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 22);
             this.label3.TabIndex = 13;
             this.label3.Text = "Gender";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(30, 267);
+            this.txtEmail.Location = new System.Drawing.Point(64, 240);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(206, 29);
             this.txtEmail.TabIndex = 6;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtLName
             // 
-            this.txtLName.Location = new System.Drawing.Point(334, 128);
+            this.txtLName.Location = new System.Drawing.Point(368, 101);
             this.txtLName.Name = "txtLName";
             this.txtLName.Size = new System.Drawing.Size(206, 29);
             this.txtLName.TabIndex = 7;
+            this.txtLName.TextChanged += new System.EventHandler(this.txtLName_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 103);
+            this.label1.Location = new System.Drawing.Point(60, 76);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 22);
             this.label1.TabIndex = 14;
             this.label1.Text = "First Name";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtFName
             // 
-            this.txtFName.Location = new System.Drawing.Point(30, 128);
+            this.txtFName.Location = new System.Drawing.Point(64, 101);
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(206, 29);
             this.txtFName.TabIndex = 8;
+            this.txtFName.TextChanged += new System.EventHandler(this.txtFName_TextChanged);
             // 
             // groupDataset
             // 
@@ -215,7 +229,7 @@ namespace Motel_Booking
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(623, 561);
+            this.ClientSize = new System.Drawing.Size(623, 502);
             this.Controls.Add(this.txtGender);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

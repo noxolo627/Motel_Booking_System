@@ -31,8 +31,12 @@ namespace Motel_Booking
         {
             this.components = new System.ComponentModel.Container();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtDays = new System.Windows.Forms.TextBox();
             this.Total = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -63,8 +67,6 @@ namespace Motel_Booking
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtRoomType = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.groupDataset = new Motel_Booking.groupDataset();
             this.bookingBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -72,8 +74,6 @@ namespace Motel_Booking
             this.tableAdapterManager = new Motel_Booking.groupDatasetTableAdapters.TableAdapterManager();
             this.roomTableAdapter1 = new Motel_Booking.groupDatasetTableAdapters.RoomTableAdapter();
             this.customerTableAdapter1 = new Motel_Booking.groupDatasetTableAdapters.CustomerTableAdapter();
-            this.txtDays = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupDataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).BeginInit();
@@ -102,6 +102,24 @@ namespace Motel_Booking
             this.panel3.TabIndex = 9;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(269, 264);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 22);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Days";
+            // 
+            // txtDays
+            // 
+            this.txtDays.Location = new System.Drawing.Point(273, 289);
+            this.txtDays.Name = "txtDays";
+            this.txtDays.ReadOnly = true;
+            this.txtDays.Size = new System.Drawing.Size(227, 29);
+            this.txtDays.TabIndex = 6;
+            this.txtDays.Text = "1";
+            // 
             // Total
             // 
             this.Total.AutoSize = true;
@@ -118,6 +136,30 @@ namespace Motel_Booking
             this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(227, 29);
             this.txtTotal.TabIndex = 6;
+            // 
+            // button5
+            // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(547, 227);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(257, 48);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "ROOMS";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(547, 167);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(257, 48);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "BOOKINGS";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -202,12 +244,13 @@ namespace Motel_Booking
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(26, 348);
+            this.button2.Location = new System.Drawing.Point(53, 348);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(355, 62);
+            this.button2.Size = new System.Drawing.Size(312, 45);
             this.button2.TabIndex = 4;
             this.button2.Text = "REGISTER NEW CUSTOMER";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -393,30 +436,6 @@ namespace Motel_Booking
             this.txtRoomType.Size = new System.Drawing.Size(257, 29);
             this.txtRoomType.TabIndex = 0;
             // 
-            // button3
-            // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(547, 167);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(257, 48);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "BOOKINGS";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button5
-            // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(547, 227);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(257, 48);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "ROOMS";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // button6
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -460,24 +479,6 @@ namespace Motel_Booking
             // customerTableAdapter1
             // 
             this.customerTableAdapter1.ClearBeforeFill = true;
-            // 
-            // txtDays
-            // 
-            this.txtDays.Location = new System.Drawing.Point(273, 289);
-            this.txtDays.Name = "txtDays";
-            this.txtDays.ReadOnly = true;
-            this.txtDays.Size = new System.Drawing.Size(227, 29);
-            this.txtDays.TabIndex = 6;
-            this.txtDays.Text = "1";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(269, 264);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 22);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Days";
             // 
             // Booking
             // 

@@ -4644,7 +4644,7 @@ SELECT booking_id, cust_id, staff_id, room_num, booking_type, total_cost, paymen
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[7];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT booking_id, cust_id, staff_id, room_num, booking_type, total_cost, payment" +
@@ -4673,11 +4673,32 @@ SELECT booking_id, cust_id, staff_id, room_num, booking_type, total_cost, paymen
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "cust_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "SELECT        total_cost\r\nFROM            Booking\r\nWHERE        (payment_date BET" +
-                "WEEN @start AND @end)";
+            this._commandCollection[4].CommandText = @"SELECT        booking_id, cust_id, staff_id, room_num, booking_type, total_cost, payment_date, check_in, check_out
+FROM            Booking
+WHERE        (check_in BETWEEN @start AND @end) AND (cust_id = @id) OR
+                         (check_out BETWEEN @start AND @end) AND (cust_id = @id)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@start", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "payment_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@end", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "payment_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@start", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "check_in", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@end", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "check_in", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "cust_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "SELECT        total_cost\r\nFROM            Booking\r\nWHERE        (payment_date BET" +
+                "WEEN @start AND @end)";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@start", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "payment_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@end", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "payment_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[6].Connection = this.Connection;
+            this._commandCollection[6].CommandText = @"UPDATE       Booking
+SET                check_in = @check_in, check_out = @check_out
+WHERE        (booking_id = @Original_booking_id); 
+SELECT booking_id, cust_id, staff_id, room_num, booking_type, total_cost, payment_date, check_in, check_out FROM Booking WHERE (booking_id = @booking_id)";
+            this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@check_in", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "check_in", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@check_out", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "check_out", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_booking_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "booking_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@booking_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "booking_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4782,8 +4803,58 @@ SELECT booking_id, cust_id, staff_id, room_num, booking_type, total_cost, paymen
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByPayment(groupDataset.BookingDataTable dataTable, System.DateTime start, System.DateTime end) {
+        public virtual int FillByCustomerBooking(groupDataset.BookingDataTable dataTable, string start, string end, int id) {
             this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((start == null)) {
+                throw new global::System.ArgumentNullException("start");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(start));
+            }
+            if ((end == null)) {
+                throw new global::System.ArgumentNullException("end");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(end));
+            }
+            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(id));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual groupDataset.BookingDataTable GetDataBy5(string start, string end, int id) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((start == null)) {
+                throw new global::System.ArgumentNullException("start");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(start));
+            }
+            if ((end == null)) {
+                throw new global::System.ArgumentNullException("end");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(end));
+            }
+            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(id));
+            groupDataset.BookingDataTable dataTable = new groupDataset.BookingDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPayment(groupDataset.BookingDataTable dataTable, System.DateTime start, System.DateTime end) {
+            this.Adapter.SelectCommand = this.CommandCollection[5];
             this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(start));
             this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(end));
             if ((this.ClearBeforeFill == true)) {
@@ -4798,7 +4869,7 @@ SELECT booking_id, cust_id, staff_id, room_num, booking_type, total_cost, paymen
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual groupDataset.BookingDataTable GetDataBy3(System.DateTime start, System.DateTime end) {
-            this.Adapter.SelectCommand = this.CommandCollection[4];
+            this.Adapter.SelectCommand = this.CommandCollection[5];
             this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(start));
             this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(end));
             groupDataset.BookingDataTable dataTable = new groupDataset.BookingDataTable();
@@ -5003,6 +5074,43 @@ SELECT booking_id, cust_id, staff_id, room_num, booking_type, total_cost, paymen
         public virtual int DeleteQuery(int Original_booking_id) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             command.Parameters[0].Value = ((int)(Original_booking_id));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateQuery(string check_in, string check_out, int Original_booking_id, int booking_id) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[6];
+            if ((check_in == null)) {
+                throw new global::System.ArgumentNullException("check_in");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(check_in));
+            }
+            if ((check_out == null)) {
+                throw new global::System.ArgumentNullException("check_out");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(check_out));
+            }
+            command.Parameters[2].Value = ((int)(Original_booking_id));
+            command.Parameters[3].Value = ((int)(booking_id));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

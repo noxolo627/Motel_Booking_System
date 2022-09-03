@@ -51,19 +51,15 @@ namespace Motel_Booking
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("This feature has not yet been implemented");
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature has not yet been implemented");
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("This feature has not yet been implemented");
+            try
+            {
+                bookingTableAdapter.FillByCustomerBooking(groupDataset.Booking, startDate.Value.ToShortDateString(), endDate.Value.ToShortDateString(), int.Parse(textBox2.Text));
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

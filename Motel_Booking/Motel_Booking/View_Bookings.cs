@@ -44,7 +44,15 @@ namespace Motel_Booking
             else
             {
                 UpdateBooking x = new UpdateBooking();
-                x.setUpdate(txtBID.Text, txtRoomNum.Text, txtTotalCost.Text, txtCheckIn.Text, txtCheckOut.Text);
+                DateTime checkin = Convert.ToDateTime(txtCheckIn.Text);
+                DateTime checkout = Convert.ToDateTime(txtCheckOut.Text);
+                if(checkout.Ticks <= DateTime.Now.Ticks)
+                {
+                    MessageBox.Show("This booking cannot be updated because the customer is about to, or is going to check out");
+                    return;
+                }
+                int days = int.Parse((checkout - checkin).TotalDays.ToString());
+                x.setUpdate(txtBID.Text, txtRoomNum.Text, txtTotalCost.Text, txtCheckIn.Text, txtCheckOut.Text, days);
                 x.Show();
             }
         }
@@ -116,15 +124,20 @@ namespace Motel_Booking
                 MessageBox.Show("Select a booking to continue");
                 return;
             }
-            try
+            DialogResult res = MessageBox.Show("Are you sure you want to cancel this booking? This action cannot be undone", "", MessageBoxButtons.YesNo);
+            if(DialogResult.Yes == res)
             {
-                bookingTableAdapter.DeleteQuery(int.Parse(txtBID.Text));
-                paymentTableAdapter1.DeleteQuery(int.Parse(txtBID.Text));
-                MessageBox.Show("Booking Successfully Canceled");
-                button2_Click(sender, e);
-            }catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    bookingTableAdapter.DeleteQuery(int.Parse(txtBID.Text));
+                    paymentTableAdapter1.DeleteQuery(int.Parse(txtBID.Text));
+                    MessageBox.Show("Booking Successfully Canceled");
+                    button2_Click(sender, e);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }
