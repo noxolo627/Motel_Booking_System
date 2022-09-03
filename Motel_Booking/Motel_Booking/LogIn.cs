@@ -16,5 +16,30 @@ namespace Motel_Booking
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int c = int.Parse(staffTableAdapter1.login(txtEmail.Text, txtPassword.Text).ToString());
+                if(c <= 0)
+                {
+                    MessageBox.Show("Invalid details.");
+                    return;
+                }
+                MessageBox.Show("Successful login");
+                Home x = new Home();
+                x.Show();
+                this.Hide();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

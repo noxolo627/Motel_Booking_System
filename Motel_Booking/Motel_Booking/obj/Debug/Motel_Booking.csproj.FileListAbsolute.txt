@@ -48,3 +48,4 @@ C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_B
 C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.pdb
 C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.Payments.resources
 C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.UpdateBooking.resources
+C:\Users\jamil\Source\Repos\noxolo627\Motel_Booking_System\Motel_Booking\Motel_Booking\obj\Debug\Motel_Booking.LogIn.resources
