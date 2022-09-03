@@ -99,6 +99,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Payments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Payments.resx">
       <DependentUpon>Payments.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +251,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\motel.jpg" />
+    <Content Include="images\motel2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
